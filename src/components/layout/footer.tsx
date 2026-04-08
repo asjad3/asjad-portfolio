@@ -85,13 +85,10 @@ export function Footer() {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ delay: 0.4 }}
-          className="mt-8 border-t border-[var(--border-light)] pt-6 flex justify-between"
+          className="mt-8 border-t border-[var(--border-light)] pt-6"
         >
           <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--text-dim)]">
             &copy; {new Date().getFullYear()} Asjad. All rights reserved.
-          </span>
-          <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--text-dim)]">
-            Built with Next.js
           </span>
         </motion.div>
       </motion.div>
