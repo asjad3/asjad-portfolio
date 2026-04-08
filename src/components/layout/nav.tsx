@@ -75,6 +75,14 @@ export function Nav() {
             <a href="#work" className="text-sm font-medium text-[var(--text-muted)] transition-colors hover:text-[var(--text-primary)]">Work</a>
             <a href="#about" className="text-sm font-medium text-[var(--text-muted)] transition-colors hover:text-[var(--text-primary)]">About</a>
             <a href="#contact" className="text-sm font-medium text-[var(--text-muted)] transition-colors hover:text-[var(--text-primary)]">Contact</a>
+            <a
+              href="https://github.com/asjad3"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium text-[var(--text-muted)] transition-colors hover:text-[var(--text-primary)]"
+            >
+              GitHub
+            </a>
           </div>
 
           <a

@@ -50,6 +50,16 @@ export function Hero() {
       ref={ref}
       className="relative mx-auto flex w-full max-w-[1184px] flex-col justify-end px-5 pt-28 pb-16 sm:px-6 sm:pt-36 sm:pb-20 md:px-12 md:pt-52 md:pb-32"
     >
+      {/* Name */}
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.05, duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+        className="mb-2 font-serif text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl"
+      >
+        Hussain Asjad Abbas
+      </motion.h2>
+
       {/* Eyebrow */}
       <motion.div
         initial={{ opacity: 0, x: -20 }}
