@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 
 const GITHUB_USERNAME = "asjad3";
-const REVALIDATE = 3600; // 1 hour cache
 
 export async function GET() {
   const token = process.env.GITHUB_TOKEN;
@@ -40,7 +39,7 @@ export async function GET() {
         `,
         variables: { username: GITHUB_USERNAME },
       }),
-      next: { revalidate: REVALIDATE },
+      cache: "no-store",
     });
 
     if (!res.ok) {
@@ -54,7 +53,9 @@ export async function GET() {
       throw new Error("No contribution data returned");
     }
 
-    return NextResponse.json({ data: calendar });
+    return NextResponse.json({ data: calendar }, {
+      headers: { "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=60" },
+    });
   } catch (error) {
     return NextResponse.json(
       { error: error instanceof Error ? error.message : "Failed to fetch contributions" },
