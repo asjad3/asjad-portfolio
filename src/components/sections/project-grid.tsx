@@ -29,7 +29,6 @@ const itemVariants = {
 export function ProjectGrid() {
   const [activeFilter, setActiveFilter] = useState("All");
   const headerRef = useRef(null);
-  const headerInView = useInView(headerRef, { once: true, margin: "-50px" });
   const listRef = useRef(null);
   const listInView = useInView(listRef, { once: true, margin: "-30px" });
 

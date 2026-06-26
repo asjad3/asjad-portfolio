@@ -4,10 +4,10 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 
 const subtitles = [
-  "Full-stack engineer",
-  "AI systems developer",
-  "Backend developer",
-  "Mobile developer",
+  "Product builder",
+  "AI product thinker",
+  "Technical operator",
+  "Full-stack generalist",
 ];
 
 export function Hero() {
@@ -82,7 +82,7 @@ export function Hero() {
       <motion.div style={{ y, opacity }} className="leading-[0.95] tracking-tight">
         <h1 className="font-serif font-semibold">
           <span className="flex flex-wrap items-baseline gap-x-2 sm:gap-x-3 md:gap-x-4">
-            {["Full-stack", "software"].map((word, i) => (
+            {["Product-minded", "software"].map((word, i) => (
               <motion.span
                 key={word}
                 className="overflow-hidden"
@@ -139,7 +139,7 @@ export function Hero() {
             </motion.span>
           </span>
           <p className="text-xs leading-relaxed text-[var(--text-dim)] sm:text-sm">
-            Software engineering across web, mobile, and AI.
+            Product thinking across web, mobile, and AI.
           </p>
         </div>
         <motion.div

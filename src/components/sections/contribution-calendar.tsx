@@ -4,15 +4,14 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect, useCallback } from "react";
 import type { GitHubContributionDay } from "@/lib/github-types";
 
-const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const DAY_LABELS = ["", "Mon", "", "Wed", "", "Fri", ""];
 
 const CONTRIBUTION_COLORS = [
-  "bg-[rgba(0,0,0,0.04)]",
-  "bg-[rgba(27,31,35,0.08)]",
-  "bg-[rgba(27,31,35,0.20)]",
-  "bg-[rgba(27,31,35,0.35)]",
-  "bg-[rgba(27,31,35,0.50)]",
+  "bg-[rgba(26,26,26,0.08)]",
+  "bg-[rgba(26,26,26,0.22)]",
+  "bg-[rgba(26,26,26,0.40)]",
+  "bg-[rgba(26,26,26,0.62)]",
+  "bg-[rgba(26,26,26,0.82)]",
 ];
 
 function getLevel(count: number): number {

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -67,9 +68,9 @@ export function Nav() {
         }`}
       >
         <div className="mx-auto flex h-[72px] w-full max-w-[1280px] items-center justify-between px-6 md:px-12">
-          <a href="/" className="text-lg font-serif font-semibold tracking-tight">
+          <Link href="/" className="text-lg font-serif font-semibold tracking-tight">
             Asjad.
-          </a>
+          </Link>
 
           <div className="hidden md:flex items-center gap-10">
             <a href="#work" className="text-sm font-medium text-[var(--text-muted)] transition-colors hover:text-[var(--text-primary)]">Work</a>
@@ -87,7 +88,7 @@ export function Nav() {
 
           <a
             href="mailto:h.asjad.abbas@gmail.com"
-            className="hidden md:flex h-[36px] items-center rounded-full bg-[var(--text-primary)] px-5 text-xs font-medium uppercase tracking-widest text-[var(--bg-primary)] transition-opacity hover:opacity-80"
+            className="hidden h-[36px] items-center rounded-full bg-[var(--text-primary)] px-5 font-mono text-xs uppercase tracking-widest text-[var(--bg-primary)] transition-opacity hover:opacity-80 md:flex"
           >
             Contact
           </a>

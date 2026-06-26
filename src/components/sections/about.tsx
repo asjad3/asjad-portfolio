@@ -4,12 +4,6 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { timeline } from "@/lib/projects";
 
-const stats = [
-  { value: "9+", label: "Projects" },
-  { value: "5+", label: "Languages" },
-  { value: "1", label: "Live Demo" },
-];
-
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -54,55 +48,34 @@ export function About() {
             variants={itemVariants}
             className="font-serif text-3xl font-semibold leading-tight sm:text-4xl md:text-5xl"
           >
-            Full-stack engineer focused on AI systems.
+            Product-minded builder focused on AI systems.
           </motion.h3>
           <motion.div variants={itemVariants} className="flex flex-col gap-4 sm:gap-5 text-sm leading-relaxed text-[var(--text-muted)]">
             <p>
-              Computer science student at NUST. I develop web applications, mobile
-              clients, and backend services in Python, TypeScript, and Go.
+              Computer science student at NUST. I care about shaping useful product
+              ideas, validating them quickly, and building enough of the system to
+              make the experience real.
             </p>
             <p>
               Recent work includes an empirical study of LLM fusion on OpenRouter,
               MCP servers for agent tooling, and a FastAPI service that uses pgvector
-              for face-based photo retrieval at scale. Earlier projects include
-              e-commerce platforms, mobile assistants with third-party integrations,
-              and hackathon submissions.
+              for face-based photo retrieval at scale.
             </p>
             <p>
-              I work across the full stack and ship production-ready systems. Open to
-              contract work, collaborations, and technical roles.
+              I like working at the intersection of product, design, and technical
+              execution, especially where AI can make workflows simpler or more
+              personal.
             </p>
           </motion.div>
         </motion.div>
 
-        {/* Right: Stats + Timeline */}
+        {/* Right: Timeline */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           className="flex flex-col gap-6 sm:gap-8"
         >
-          {/* Stats */}
-          <motion.div
-            variants={itemVariants}
-            className="grid grid-cols-3 gap-4 pb-6 sm:gap-6 sm:pb-8 border-b border-[var(--border)]"
-          >
-            {stats.map((stat) => (
-              <motion.div
-                key={stat.label}
-                variants={itemVariants}
-                whileHover={{ scale: 1.05 }}
-                className="flex flex-col gap-1"
-              >
-                <span className="font-serif text-2xl font-semibold sm:text-3xl">{stat.value}</span>
-                <span className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-dim)]">
-                  {stat.label}
-                </span>
-              </motion.div>
-            ))}
-          </motion.div>
-
-          {/* Timeline */}
           <motion.div variants={itemVariants} className="flex flex-col">
             {timeline.map((item, i) => (
               <motion.div
