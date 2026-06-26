@@ -106,16 +106,14 @@ export function About() {
           <motion.div variants={itemVariants} className="flex flex-col">
             {timeline.map((item, i) => (
               <motion.div
-                key={item.year}
+                key={item.title}
                 variants={itemVariants}
                 className={`group flex gap-4 pb-8 sm:gap-5 ${
                   i < timeline.length - 1 ? "border-b border-[var(--border)]" : ""
                 }`}
               >
                 <div className="flex flex-col items-center">
-                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[var(--border)] font-mono text-xs font-medium text-[var(--text-muted)] transition-all group-hover:border-[var(--text-primary)] group-hover:bg-[var(--text-primary)] group-hover:text-[var(--bg-primary)] sm:h-9 sm:w-9">
-                    {item.year.slice(2)}
-                  </div>
+                  <div className="mt-1.5 h-2 w-2 shrink-0 rounded-full border border-[var(--border)] bg-[var(--bg-primary)] transition-all group-hover:border-[var(--text-primary)] group-hover:bg-[var(--text-primary)]" />
                   {i < timeline.length - 1 && (
                     <div className="mt-2 h-full w-px bg-[var(--border)]" />
                   )}

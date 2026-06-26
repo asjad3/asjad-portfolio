@@ -93,15 +93,9 @@ export function ProjectGrid() {
               className="flex flex-col gap-4 border-t border-[var(--border)] py-8 sm:flex-row sm:items-start sm:justify-between sm:py-10 md:py-12"
             >
               <div className="flex flex-col gap-2">
-                <div className="flex items-center gap-3">
-                  <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
-                    {project.category}
-                  </span>
-                  <span className="text-[var(--text-dim)]">/</span>
-                  <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
-                    {project.year}
-                  </span>
-                </div>
+                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--text-dim)]">
+                  {project.category}
+                </span>
                 <h3 className="font-serif text-xl font-semibold leading-tight sm:text-2xl md:text-3xl">
                   {project.title}
                 </h3>

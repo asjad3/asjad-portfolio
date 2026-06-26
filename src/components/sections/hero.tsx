@@ -74,7 +74,7 @@ export function Hero() {
           className="h-px w-6 origin-left bg-[var(--text-dim)] sm:w-8"
         />
         <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-[var(--text-muted)] sm:text-xs">
-          Portfolio · 2026
+          Portfolio
         </span>
       </motion.div>
 

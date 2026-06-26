@@ -88,7 +88,7 @@ export function Footer() {
           className="mt-8 border-t border-[var(--border-light)] pt-6"
         >
           <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--text-dim)]">
-            &copy; {new Date().getFullYear()} Asjad. All rights reserved.
+            &copy; Asjad. All rights reserved.
           </span>
         </motion.div>
       </motion.div>

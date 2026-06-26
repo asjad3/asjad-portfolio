@@ -29,7 +29,6 @@ function formatDate(dateStr: string): string {
     weekday: "short",
     month: "short",
     day: "numeric",
-    year: "numeric",
   });
 }
 
@@ -79,7 +78,7 @@ export function ContributionCalendar() {
           </h2>
           {!loading && total > 0 && (
             <span className="font-mono text-sm text-[var(--text-dim)] pb-1">
-              {total.toLocaleString()} in the last year
+              {total.toLocaleString()} total
             </span>
           )}
         </div>

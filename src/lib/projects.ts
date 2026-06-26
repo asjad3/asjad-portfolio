@@ -5,7 +5,6 @@ export interface Project {
   description: string;
   tags: string[];
   category: string;
-  year: string;
   githubUrl: string;
   liveUrl?: string;
 }
@@ -19,7 +18,6 @@ export const projects: Project[] = [
       "Empirical study comparing fused multi-model panels with judge aggregation against single frontier models. Python harness with OpenRouter integration, standard benchmarks (DRACO, GSM8K, GPQA, HumanEval), and run-level cost tracking.",
     tags: ["Python", "OpenRouter", "LLM Fusion", "Benchmarking"],
     category: "Research",
-    year: "2026",
     githubUrl: "https://github.com/asjad3/ml-paper",
   },
   {
@@ -30,7 +28,6 @@ export const projects: Project[] = [
       "Backend API for event photo discovery. Face detection and embedding with dlib, identity clustering via streaming centroids, pgvector cosine search, and selfie-based authentication. Deployed with Docker on Render.",
     tags: ["FastAPI", "pgvector", "Python", "Docker"],
     category: "Backend",
-    year: "2026",
     githubUrl: "https://github.com/asjad3/vyro-thon",
   },
   {
@@ -41,7 +38,6 @@ export const projects: Project[] = [
       "Personal knowledge system with a custom MCP server, FTS5 full-text search, a tag and rules engine, and a PARA-organized markdown vault backed by SQLite.",
     tags: ["MCP", "Next.js", "SQLite", "FTS5"],
     category: "Agentic Systems",
-    year: "2025",
     githubUrl: "https://github.com/asjad3/agentic-knowledge",
   },
   {
@@ -52,7 +48,6 @@ export const projects: Project[] = [
       "Next.js landing page connected to MCP tooling. Prototype for exposing agent-accessible tools and context through a web interface.",
     tags: ["Next.js", "TypeScript", "MCP"],
     category: "Agentic Systems",
-    year: "2026",
     githubUrl: "https://github.com/asjad3/landing-page-mcp",
   },
   {
@@ -63,7 +58,6 @@ export const projects: Project[] = [
       "MCP server implementation in Go. Connects LLM clients to external tools and data sources over the Model Context Protocol.",
     tags: ["Go", "MCP"],
     category: "Agentic Systems",
-    year: "2026",
     githubUrl: "https://github.com/asjad3/test-mcp-imagineart",
   },
   {
@@ -74,7 +68,6 @@ export const projects: Project[] = [
       "Expo mobile application with Groq-backed chat, Google Calendar and Gmail integration, Meet scheduling, voice input, and daily briefings.",
     tags: ["Expo", "React Native", "Groq", "Supabase"],
     category: "Mobile",
-    year: "2025",
     githubUrl: "https://github.com/asjad3/expo-agentic-assistant-app",
   },
   {
@@ -85,7 +78,6 @@ export const projects: Project[] = [
       "React Native journaling app with OpenAI Whisper transcription, sentiment analysis, weekly summaries, and streak tracking. Node.js and PostgreSQL backend.",
     tags: ["React Native", "OpenAI", "PostgreSQL", "Node.js"],
     category: "Mobile",
-    year: "2026",
     githubUrl: "https://github.com/asjad3/stealthstartup",
   },
   {
@@ -96,7 +88,6 @@ export const projects: Project[] = [
       "Next.js storefront with infinite scroll, ISR caching, JSON-LD structured data, NextAuth authentication, Supabase backend, and Zustand state management.",
     tags: ["Next.js", "Supabase", "Zustand", "NextAuth"],
     category: "Web App",
-    year: "2025",
     githubUrl: "https://github.com/asjad3/clone",
     liveUrl: "https://lootmartclone.vercel.app",
   },
@@ -108,7 +99,6 @@ export const projects: Project[] = [
       "Anonymous campus rumor verification platform with Bayesian trust scoring, cryptographic voting, evidence uploads, and Gemini-based content moderation.",
     tags: ["React", "Express", "Supabase", "Gemini"],
     category: "Hackathon",
-    year: "2025",
     githubUrl: "https://github.com/asjad3/hackathon-app",
   },
 ];
@@ -123,13 +113,11 @@ export const skills = [
 
 export const timeline = [
   {
-    year: "2026",
     title: "AI and systems",
     description:
       "LLM fusion research, MCP server development, and vector search backends with FastAPI and pgvector.",
   },
   {
-    year: "2025",
     title: "Full-stack development",
     description:
       "Web and mobile applications including e-commerce, integrated assistants, and hackathon projects. Next.js, Supabase, and React Native.",
