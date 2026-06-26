@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Playfair_Display, JetBrains_Mono, Inter } from "next/font/google";
 import "./globals.css";
-import { ParallaxBg } from "@/components/ui/parallax-bg";
 import { GridBg } from "@/components/ui/grid-bg";
 import { SmoothScroll } from "@/components/ui/smooth-scroll";
 
@@ -25,7 +24,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Asjad Abbas",
-  description: "Portfolio of Hussain Asjad Abbas. Full-stack and AI systems engineering.",
+  description: "Portfolio of Hussain Asjad Abbas. Product builder and computer science student at NUST.",
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
@@ -56,8 +55,6 @@ export default function RootLayout({
       <body className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)]">
         <SmoothScroll />
         <div id="scroll-progress" />
-        <div className="custom-cursor hidden md:block" />
-        <ParallaxBg />
         <GridBg />
         <div className="relative z-10">
           {children}

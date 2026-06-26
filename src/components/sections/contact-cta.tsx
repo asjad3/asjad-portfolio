@@ -58,34 +58,24 @@ export function ContactCTA() {
 
           <div className="flex flex-col border-t border-[var(--border)]">
             {socials.map((social, i) => (
-            <motion.a
-              key={social.label}
-              href={social.href}
-              target={social.href.startsWith("http") ? "_blank" : undefined}
-              rel={social.href.startsWith("http") ? "noopener noreferrer" : undefined}
-              variants={itemVariants}
-              initial="hidden"
-              animate={inView ? "visible" : "hidden"}
-              transition={{ delay: 0.12 + i * 0.06 }}
-              className="group grid grid-cols-[auto_1fr_auto] items-center gap-4 border-b border-[var(--border)] py-5 transition-colors hover:border-[var(--text-muted)] sm:py-6"
-            >
-              <span className="w-20 font-mono text-[10px] uppercase tracking-[0.25em] text-[var(--text-dim)] sm:w-24">
-                {social.label}
-              </span>
-              <span className="font-serif text-xl font-medium leading-snug transition-colors group-hover:text-[var(--text-primary)] sm:text-2xl md:text-3xl">
-                {social.handle}
-              </span>
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 16 16"
-                fill="none"
-                aria-hidden="true"
-                className="shrink-0 text-[var(--text-dim)] transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-[var(--text-primary)]"
+              <motion.a
+                key={social.label}
+                href={social.href}
+                target={social.href.startsWith("http") ? "_blank" : undefined}
+                rel={social.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                variants={itemVariants}
+                initial="hidden"
+                animate={inView ? "visible" : "hidden"}
+                transition={{ delay: 0.12 + i * 0.06 }}
+                className="grid grid-cols-[auto_1fr] items-center gap-4 border-b border-[var(--border)] py-5 transition-colors hover:border-[var(--text-muted)] sm:py-6"
               >
-                <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" />
-              </svg>
-            </motion.a>
+                <span className="w-20 font-mono text-[10px] uppercase tracking-[0.25em] text-[var(--text-dim)] sm:w-24">
+                  {social.label}
+                </span>
+                <span className="font-serif text-xl font-medium leading-snug sm:text-2xl md:text-3xl">
+                  {social.handle}
+                </span>
+              </motion.a>
             ))}
           </div>
         </div>

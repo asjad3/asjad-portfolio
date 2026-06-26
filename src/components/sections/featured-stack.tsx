@@ -94,24 +94,23 @@ export function FeaturedStack() {
               delay: 0.05 + i * 0.06,
               ease: [0.25, 0.1, 0.25, 1],
             }}
-            className={`group relative overflow-hidden rounded-sm border border-[var(--border)] bg-[var(--bg-primary)] p-5 transition-colors hover:border-[var(--text-muted)] sm:p-6 ${cat.span}`}
+            className={`border-t border-[var(--border)] py-5 sm:py-6 ${cat.span}`}
           >
             <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-[var(--text-dim)]">
               {cat.label}
             </span>
-            <div className="mt-3 flex flex-wrap gap-2 sm:mt-4">
+            <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 sm:mt-4">
               {cat.items.map((tech, j) => (
                 <motion.span
                   key={tech}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={inView ? { opacity: 1, scale: 1 } : {}}
+                  initial={{ opacity: 0, y: 6 }}
+                  animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{
                     duration: 0.25,
                     delay: 0.1 + i * 0.06 + j * 0.03,
                     ease: [0.25, 0.1, 0.25, 1],
                   }}
-                  whileHover={{ scale: 1.06, y: -2 }}
-                  className="inline-block cursor-default rounded-full border border-[var(--border)] px-2.5 py-1 text-[11px] font-mono text-[var(--text-muted)] transition-colors hover:border-[var(--text-muted)] hover:text-[var(--text-primary)] sm:px-3 sm:py-1.5 sm:text-xs"
+                  className="text-[11px] font-mono text-[var(--text-muted)] sm:text-xs"
                 >
                   {tech}
                 </motion.span>

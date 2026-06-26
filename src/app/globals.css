@@ -51,36 +51,6 @@ body {
   background-size: 256px 256px;
 }
 
-/* Marquee animation */
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-.marquee-track {
-  animation: marquee 25s linear infinite;
-}
-
-/* Smooth underline */
-.hover-underline {
-  position: relative;
-}
-
-.hover-underline::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background: currentColor;
-  transition: width 0.3s ease;
-}
-
-.hover-underline:hover::after {
-  width: 100%;
-}
-
 /* Scroll progress bar */
 #scroll-progress {
   position: fixed;
@@ -91,36 +61,4 @@ body {
   background: var(--text-primary);
   transform-origin: left;
   transition: transform 0.1s linear;
-}
-
-/* Custom cursor */
-.custom-cursor {
-  position: fixed;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--text-primary);
-  pointer-events: none;
-  z-index: 9998;
-  mix-blend-mode: difference;
-  transition: transform 0.15s ease;
-}
-
-.custom-cursor.hovering {
-  transform: scale(3);
-}
-
-/* Pulse dot */
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
-}
-
-.animate-pulse-slow {
-  animation: pulse 2s ease-in-out infinite;
-}
-
-/* Prevent flash of unstyled content on hero text */
-.hero-word {
-  display: inline-block;
 }

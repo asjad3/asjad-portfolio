@@ -86,7 +86,7 @@ export function About() {
                 }`}
               >
                 <div className="flex flex-col items-center">
-                  <div className="mt-1.5 h-2 w-2 shrink-0 rounded-full border border-[var(--border)] bg-[var(--bg-primary)] transition-all group-hover:border-[var(--text-primary)] group-hover:bg-[var(--text-primary)]" />
+                  <div className="mt-1.5 h-2 w-2 shrink-0 border border-[var(--border)] bg-[var(--bg-primary)]" />
                   {i < timeline.length - 1 && (
                     <div className="mt-2 h-full w-px bg-[var(--border)]" />
                   )}

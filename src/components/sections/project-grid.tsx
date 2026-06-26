@@ -56,20 +56,19 @@ export function ProjectGrid() {
         <div className="-mx-5 overflow-x-auto px-5 pb-2 sm:-mx-6 sm:px-6 sm:overflow-visible md:-mx-12 md:px-12">
           <div className="flex gap-2 whitespace-nowrap" role="radiogroup" aria-label="Filter projects by category">
             {categoryFilters.map((cat) => (
-              <motion.button
+              <button
                 key={cat}
                 onClick={() => setActiveFilter(cat)}
-                whileTap={{ scale: 0.95 }}
                 role="radio"
                 aria-checked={activeFilter === cat}
-                className={`rounded-full border px-3 py-1.5 text-xs font-mono uppercase tracking-wider transition-all sm:px-4 sm:py-2 ${
+                className={`border-b py-1.5 text-xs font-mono uppercase tracking-wider transition-colors ${
                   activeFilter === cat
-                    ? "border-[var(--text-primary)] bg-[var(--text-primary)] text-[var(--bg-primary)]"
-                    : "border-[var(--border)] text-[var(--text-muted)]"
+                    ? "border-[var(--text-primary)] text-[var(--text-primary)]"
+                    : "border-transparent text-[var(--text-muted)]"
                 }`}
               >
                 {cat}
-              </motion.button>
+              </button>
             ))}
           </div>
         </div>
@@ -134,15 +133,6 @@ export function ProjectGrid() {
                     </a>
                   )}
                 </div>
-                <motion.div
-                  className="hidden items-center text-[var(--text-dim)] sm:flex"
-                  whileHover={{ x: 8, opacity: 1 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                >
-                  <svg width="20" height="20" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                    <path d="M4 12L12 4M12 4H5M12 4V11" stroke="currentColor" strokeWidth="1.5" />
-                  </svg>
-                </motion.div>
               </div>
             </motion.article>
           ))}

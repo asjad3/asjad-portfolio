@@ -25,30 +25,6 @@ export function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Custom cursor
-  useEffect(() => {
-    const cursor = document.querySelector(".custom-cursor") as HTMLElement;
-    if (!cursor) return;
-
-    const mq = window.matchMedia("(min-width: 768px)");
-    if (!mq.matches) return;
-
-    const onMouseMove = (e: MouseEvent) => {
-      cursor.style.left = e.clientX - 6 + "px";
-      cursor.style.top = e.clientY - 6 + "px";
-    };
-    const handleHover = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      cursor.classList.toggle("hovering", !!target.closest("a, button, .group"));
-    };
-    window.addEventListener("mousemove", onMouseMove, { passive: true });
-    window.addEventListener("mouseover", handleHover);
-    return () => {
-      window.removeEventListener("mousemove", onMouseMove);
-      window.removeEventListener("mouseover", handleHover);
-    };
-  }, []);
-
   // Escape key closes mobile menu
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -88,7 +64,7 @@ export function Nav() {
 
           <a
             href="mailto:h.asjad.abbas@gmail.com"
-            className="hidden h-[36px] items-center rounded-full bg-[var(--text-primary)] px-5 font-mono text-xs uppercase tracking-widest text-[var(--bg-primary)] transition-opacity hover:opacity-80 md:flex"
+            className="hidden h-[36px] items-center border border-[var(--text-primary)] px-4 font-mono text-xs uppercase tracking-widest text-[var(--text-primary)] transition-colors hover:bg-[var(--text-primary)] hover:text-[var(--bg-primary)] md:flex"
           >
             Contact
           </a>
