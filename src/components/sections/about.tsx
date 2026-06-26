@@ -5,9 +5,9 @@ import { useRef } from "react";
 import { timeline } from "@/lib/projects";
 
 const stats = [
-  { value: "8+", label: "Projects" },
-  { value: "6+", label: "Languages" },
-  { value: "3", label: "Live Apps" },
+  { value: "9+", label: "Projects" },
+  { value: "5+", label: "Languages" },
+  { value: "1", label: "Live Demo" },
 ];
 
 const containerVariants = {
@@ -38,7 +38,7 @@ export function About() {
           About
         </span>
         <h2 className="font-serif text-2xl font-semibold sm:text-3xl md:text-4xl">
-          Background & Journey
+          Overview
         </h2>
       </div>
 
@@ -54,24 +54,23 @@ export function About() {
             variants={itemVariants}
             className="font-serif text-3xl font-semibold leading-tight sm:text-4xl md:text-5xl"
           >
-            Developer who thinks in systems.
+            Full-stack engineer focused on AI systems.
           </motion.h3>
           <motion.div variants={itemVariants} className="flex flex-col gap-4 sm:gap-5 text-sm leading-relaxed text-[var(--text-muted)]">
             <p>
-              I started building web apps because I liked the idea that code could
-              actually do something people use. Since then I&apos;ve shipped
-              e-commerce platforms, mobile apps, hackathon projects, and AI tools —
-              usually learning the stack as I go.
+              Computer science student at NUST. I develop web applications, mobile
+              clients, and backend services in Python, TypeScript, and Go.
             </p>
             <p>
-              I&apos;m at NUST right now. Most of my projects use Next.js on the
-              front end and something like Supabase or Express on the back. Lately
-              I&apos;ve been messing with LLM APIs and MCP servers to build agents
-              that can actually do useful things.
+              Recent work includes an empirical study of LLM fusion on OpenRouter,
+              MCP servers for agent tooling, and a FastAPI service that uses pgvector
+              for face-based photo retrieval at scale. Earlier projects include
+              e-commerce platforms, mobile assistants with third-party integrations,
+              and hackathon submissions.
             </p>
             <p>
-              If something breaks, I read the logs instead of guessing. That&apos;s
-              about it.
+              I work across the full stack and ship production-ready systems. Open to
+              contract work, collaborations, and technical roles.
             </p>
           </motion.div>
         </motion.div>

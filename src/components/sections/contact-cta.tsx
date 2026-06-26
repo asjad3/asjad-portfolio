@@ -49,13 +49,11 @@ export function ContactCTA() {
               Get in Touch
             </span>
             <h2 className="font-serif text-3xl font-semibold leading-tight sm:text-4xl md:text-5xl">
-              Let&apos;s build
-              <br />
-              <span className="text-[var(--text-muted)]">something together.</span>
+              Contact
             </h2>
             <p className="text-sm leading-relaxed text-[var(--text-muted)]">
-              I&apos;m always open to interesting projects, hackathons, and
-              collaborations. If you have something in mind, let&apos;s talk.
+              Available for freelance work, collaborations, and full-time roles.
+              Email or LinkedIn is the fastest way to reach me.
             </p>
           </motion.div>
 

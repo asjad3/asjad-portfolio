@@ -30,7 +30,7 @@ export function Footer() {
           >
             <span className="font-serif text-lg font-semibold">Asjad.</span>
             <span className="text-xs text-[var(--text-muted)]">
-              Full-stack developer &amp; systems thinker
+              Software engineer · NUST
             </span>
           </motion.div>
 

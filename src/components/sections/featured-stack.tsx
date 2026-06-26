@@ -6,24 +6,65 @@ import { useRef } from "react";
 
 const techCategories = [
   {
-    label: "Frontend",
-    items: ["TypeScript", "Next.js", "React", "Tailwind CSS", "React Native"],
+    label: "Agentic Systems",
+    items: [
+      "MCP Protocol",
+      "Multi-Agent Orchestration",
+      "Tool Calling",
+      "RAG",
+      "Agent Memory",
+      "Function Schemas",
+    ],
     span: "md:col-span-2",
   },
   {
-    label: "Backend",
-    items: ["Node.js", "Express", "Supabase", "PostgreSQL", "MongoDB"],
+    label: "Languages & Frameworks",
+    items: [
+      "Python",
+      "TypeScript",
+      "Go",
+      "FastAPI",
+      "Next.js",
+      "Pydantic",
+      "SQLAlchemy",
+    ],
     span: "md:col-span-2",
   },
   {
-    label: "AI / ML",
-    items: ["Groq", "OpenAI", "Gemini"],
+    label: "Data & Vectors",
+    items: [
+      "PostgreSQL",
+      "pgvector",
+      "IVFFlat",
+      "Cosine Search",
+      "FTS5",
+      "Embeddings",
+    ],
     span: "md:col-span-1",
   },
   {
-    label: "Tools",
-    items: ["Git", "Docker", "Vercel", "SQLite", "MySQL", "GraphQL", "REST APIs"],
+    label: "LLMs & Research",
+    items: [
+      "OpenRouter",
+      "LLM Fusion",
+      "Judge Aggregation",
+      "Benchmark Suites",
+      "Eval Harnesses",
+      "Cost Telemetry",
+    ],
     span: "md:col-span-3",
+  },
+  {
+    label: "Infra & Tooling",
+    items: [
+      "Docker",
+      "Render",
+      "Vercel",
+      "Git",
+      "REST APIs",
+      "CI/CD",
+    ],
+    span: "md:col-span-2",
   },
 ];
 

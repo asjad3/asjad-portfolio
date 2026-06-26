@@ -89,7 +89,7 @@ export function Nav() {
             href="mailto:h.asjad.abbas@gmail.com"
             className="hidden md:flex h-[36px] items-center rounded-full bg-[var(--text-primary)] px-5 text-xs font-medium uppercase tracking-widest text-[var(--bg-primary)] transition-opacity hover:opacity-80"
           >
-            Let&apos;s Talk
+            Contact
           </a>
 
           <button

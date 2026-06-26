@@ -4,10 +4,10 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 
 const subtitles = [
-  "Full-stack developer",
-  "AI enthusiast",
-  "Systems thinker",
-  "Hackathon builder",
+  "Full-stack engineer",
+  "AI systems developer",
+  "Backend developer",
+  "Mobile developer",
 ];
 
 export function Hero() {
@@ -74,7 +74,7 @@ export function Hero() {
           className="h-px w-6 origin-left bg-[var(--text-dim)] sm:w-8"
         />
         <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-[var(--text-muted)] sm:text-xs">
-          Selected Works &mdash; 2026
+          Portfolio · 2026
         </span>
       </motion.div>
 
@@ -82,7 +82,7 @@ export function Hero() {
       <motion.div style={{ y, opacity }} className="leading-[0.95] tracking-tight">
         <h1 className="font-serif font-semibold">
           <span className="flex flex-wrap items-baseline gap-x-2 sm:gap-x-3 md:gap-x-4">
-            {["Building", "digital"].map((word, i) => (
+            {["Full-stack", "software"].map((word, i) => (
               <motion.span
                 key={word}
                 className="overflow-hidden"
@@ -113,7 +113,7 @@ export function Hero() {
               }}
             >
               <span className="inline-block text-4xl text-[var(--text-muted)] sm:text-5xl md:text-7xl lg:text-8xl">
-                experiences
+                systems
               </span>
             </motion.span>
           </span>
@@ -139,7 +139,7 @@ export function Hero() {
             </motion.span>
           </span>
           <p className="text-xs leading-relaxed text-[var(--text-dim)] sm:text-sm">
-            I build things that people actually use.
+            Software engineering across web, mobile, and AI.
           </p>
         </div>
         <motion.div

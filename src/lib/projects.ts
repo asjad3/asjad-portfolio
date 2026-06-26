@@ -12,113 +12,126 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    slug: "omnichannel-commerce",
-    title: "Omni-Channel Commerce",
-    subtitle: "Full-Stack E-Commerce",
+    slug: "ml-paper",
+    title: "LLM Fusion Study",
+    subtitle: "Empirical Research",
     description:
-      "Next.js 16 storefront with infinite scroll, ISR caching, JSON-LD structured data, NextAuth + Supabase backend, and Zustand state management.",
+      "Empirical study comparing fused multi-model panels with judge aggregation against single frontier models. Python harness with OpenRouter integration, standard benchmarks (DRACO, GSM8K, GPQA, HumanEval), and run-level cost tracking.",
+    tags: ["Python", "OpenRouter", "LLM Fusion", "Benchmarking"],
+    category: "Research",
+    year: "2026",
+    githubUrl: "https://github.com/asjad3/ml-paper",
+  },
+  {
+    slug: "vyro-thon",
+    title: "Event Photo Retrieval API",
+    subtitle: "Vector Search Backend",
+    description:
+      "Backend API for event photo discovery. Face detection and embedding with dlib, identity clustering via streaming centroids, pgvector cosine search, and selfie-based authentication. Deployed with Docker on Render.",
+    tags: ["FastAPI", "pgvector", "Python", "Docker"],
+    category: "Backend",
+    year: "2026",
+    githubUrl: "https://github.com/asjad3/vyro-thon",
+  },
+  {
+    slug: "agentic-knowledge",
+    title: "Knowledge Base + MCP Server",
+    subtitle: "Agent Tooling",
+    description:
+      "Personal knowledge system with a custom MCP server, FTS5 full-text search, a tag and rules engine, and a PARA-organized markdown vault backed by SQLite.",
+    tags: ["MCP", "Next.js", "SQLite", "FTS5"],
+    category: "Agentic Systems",
+    year: "2025",
+    githubUrl: "https://github.com/asjad3/agentic-knowledge",
+  },
+  {
+    slug: "landing-page-mcp",
+    title: "MCP-Integrated Landing Page",
+    subtitle: "Next.js + MCP",
+    description:
+      "Next.js landing page connected to MCP tooling. Prototype for exposing agent-accessible tools and context through a web interface.",
+    tags: ["Next.js", "TypeScript", "MCP"],
+    category: "Agentic Systems",
+    year: "2026",
+    githubUrl: "https://github.com/asjad3/landing-page-mcp",
+  },
+  {
+    slug: "mcp-imagineart",
+    title: "MCP Server in Go",
+    subtitle: "Protocol Implementation",
+    description:
+      "MCP server implementation in Go. Connects LLM clients to external tools and data sources over the Model Context Protocol.",
+    tags: ["Go", "MCP"],
+    category: "Agentic Systems",
+    year: "2026",
+    githubUrl: "https://github.com/asjad3/test-mcp-imagineart",
+  },
+  {
+    slug: "expo-agentic-assistant",
+    title: "Mobile LLM Assistant",
+    subtitle: "React Native + Groq",
+    description:
+      "Expo mobile application with Groq-backed chat, Google Calendar and Gmail integration, Meet scheduling, voice input, and daily briefings.",
+    tags: ["Expo", "React Native", "Groq", "Supabase"],
+    category: "Mobile",
+    year: "2025",
+    githubUrl: "https://github.com/asjad3/expo-agentic-assistant-app",
+  },
+  {
+    slug: "voice-journaling",
+    title: "Voice Journaling App",
+    subtitle: "Whisper + PostgreSQL",
+    description:
+      "React Native journaling app with OpenAI Whisper transcription, sentiment analysis, weekly summaries, and streak tracking. Node.js and PostgreSQL backend.",
+    tags: ["React Native", "OpenAI", "PostgreSQL", "Node.js"],
+    category: "Mobile",
+    year: "2026",
+    githubUrl: "https://github.com/asjad3/stealthstartup",
+  },
+  {
+    slug: "ecommerce-clone",
+    title: "E-Commerce Storefront Clone",
+    subtitle: "Next.js + Supabase",
+    description:
+      "Next.js storefront with infinite scroll, ISR caching, JSON-LD structured data, NextAuth authentication, Supabase backend, and Zustand state management.",
     tags: ["Next.js", "Supabase", "Zustand", "NextAuth"],
-    category: "E-Commerce",
+    category: "Web App",
     year: "2025",
     githubUrl: "https://github.com/asjad3/clone",
     liveUrl: "https://lootmartclone.vercel.app",
   },
   {
-    slug: "campustrust",
-    title: "CampusTrust",
-    subtitle: "Rumor Verification",
+    slug: "campus-rumor-verification",
+    title: "Campus Rumor Verification",
+    subtitle: "NUST Hackathon",
     description:
-      "Anonymous campus rumor verification with Bayesian trust scores, cryptographic voting, evidence uploads, and Gemini AI moderation. Built for a NUST hackathon.",
+      "Anonymous campus rumor verification platform with Bayesian trust scoring, cryptographic voting, evidence uploads, and Gemini-based content moderation.",
     tags: ["React", "Express", "Supabase", "Gemini"],
-    category: "Web App",
+    category: "Hackathon",
     year: "2025",
     githubUrl: "https://github.com/asjad3/hackathon-app",
-  },
-  {
-    slug: "astra",
-    title: "Astra",
-    subtitle: "AI Virtual Assistant",
-    description:
-      "AI mobile assistant with Google Calendar, Gmail integration, Meet creation, voice input, and daily briefings. Built with Expo and Groq LLM.",
-    tags: ["Expo", "React Native", "Groq", "Supabase"],
-    category: "Mobile App",
-    year: "2025",
-    githubUrl: "https://github.com/asjad3/expo-agentic-assistant-app",
-  },
-  {
-    slug: "voicejournal",
-    title: "VoiceJournal AI",
-    subtitle: "Voice-First Journaling",
-    description:
-      "Voice journaling with OpenAI Whisper transcription, emotional analysis, weekly recaps, and streak tracking. React Native + Node.js + PostgreSQL.",
-    tags: ["React Native", "Node.js", "OpenAI", "PostgreSQL"],
-    category: "Mobile App",
-    year: "2026",
-    githubUrl: "https://github.com/asjad3/stealthstartup",
-  },
-  {
-    slug: "agentic-knowledge",
-    description:
-      "Knowledge base with MCP server, FTS5 search, tags, rules engine, and a PARA-organized markdown vault. SQLite-backed with a complete design system.",
-    title: "Agentic Knowledge",
-    subtitle: "Knowledge Base + MCP",
-    tags: ["Next.js", "SQLite", "MDX", "MCP"],
-    category: "Web App",
-    year: "2025",
-    githubUrl: "https://github.com/asjad3/agentic-knowledge",
-  },
-  {
-    slug: "nust-event-portal",
-    title: "NUST Event Portal",
-    subtitle: "Event Ticketing",
-    description:
-      "Event ticketing with QR codes, EasyPaisa/JazzCash payments, PDF tickets, and manager analytics dashboard.",
-    tags: ["React", "Express", "MongoDB", "JWT"],
-    category: "Web App",
-    year: "2025",
-    githubUrl: "https://github.com/asjad3/nust-h12-app",
-  },
-  {
-    slug: "task-tracker",
-    title: "Task Tracker",
-    subtitle: "Productivity",
-    description:
-      "TypeScript task management app with clean UI and responsive design.",
-    tags: ["TypeScript", "React", "Vercel"],
-    category: "Web App",
-    year: "2025",
-    githubUrl: "https://github.com/asjad3/task-tracker",
-  },
-  {
-    slug: "ghost-commits",
-    title: "Ghost Commits",
-    subtitle: "Chrome Extension",
-    description:
-      "Chrome extension for automated daily ghost commits. Manifest V3.",
-    tags: ["Chrome Extension", "JavaScript", "GitHub API"],
-    category: "Extension",
-    year: "2025",
-    githubUrl: "https://github.com/asjad3/ghost-commits",
   },
 ];
 
 export const skills = [
-  "TypeScript", "Next.js", "React", "Node.js", "Express",
-  "Supabase", "PostgreSQL", "MongoDB", "SQLite", "MySQL",
-  "Tailwind CSS", "Zustand", "React Query", "NextAuth",
-  "React Native", "Expo", "Groq", "OpenAI", "Gemini",
-  "Docker", "Vercel", "Git", "REST APIs", "GraphQL",
+  "MCP Protocol", "Multi-Agent Orchestration", "RAG Pipelines",
+  "Python", "TypeScript", "Go", "FastAPI", "Next.js", "Pydantic", "SQLAlchemy",
+  "pgvector", "IVFFlat", "Cosine Retrieval", "FTS5", "Embedding Pipelines",
+  "OpenRouter", "LLM Fusion", "Benchmarking",
+  "Docker", "Render", "Git",
 ];
 
 export const timeline = [
   {
     year: "2026",
-    title: "AI & Agentic Systems",
-    description: "Building AI-powered apps with Groq, OpenAI, and Gemini. VoiceJournal AI, Astra assistant, and agentic knowledge systems with MCP servers.",
+    title: "AI and systems",
+    description:
+      "LLM fusion research, MCP server development, and vector search backends with FastAPI and pgvector.",
   },
   {
     year: "2025",
-    title: "Full-Stack & Hackathons",
-    description: "Shipped e-commerce platform, CampusTrust hackathon project, NUST event platform. Focus on Next.js + Supabase stack with 6+ projects delivered.",
+    title: "Full-stack development",
+    description:
+      "Web and mobile applications including e-commerce, integrated assistants, and hackathon projects. Next.js, Supabase, and React Native.",
   },
 ];

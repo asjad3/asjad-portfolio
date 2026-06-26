@@ -24,8 +24,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Asjad \u2014 Selected Works",
-  description: "Archive of selected works by Asjad. Full-stack developer and systems thinker.",
+  title: "Asjad Abbas",
+  description: "Portfolio of Hussain Asjad Abbas. Full-stack and AI systems engineering.",
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
