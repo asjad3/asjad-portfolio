@@ -1,14 +1,12 @@
+import path from "node:path";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "opengraph.githubassets.com",
-      },
-    ],
-  },
+  reactStrictMode: true,
+  // a stray lockfile in the home directory would otherwise be picked as the workspace root
+  turbopack: { root: path.resolve(__dirname) },
+  images: { formats: ["image/avif", "image/webp"] },
+  allowedDevOrigins: ["127.0.0.1"],
 };
 
 export default nextConfig;

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#fbfbfa"/>
+  <path d="M9 41.5c0-2 1.4-3.5 3.4-3.6l40-2.4c2.3-.1 4.2 1.7 4.1 4l-.3 6.1c-.1 2-1.7 3.6-3.7 3.6H12.8c-2.1 0-3.8-1.7-3.8-3.8z" fill="#ffe94a"/>
+  <text x="32" y="44" text-anchor="middle" font-family="Atkinson Hyperlegible Next, Arial, sans-serif" font-weight="800" font-size="40" fill="#1c1d1f">A</text>
+</svg>
