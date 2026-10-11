@@ -7,21 +7,23 @@ const experience = [
 export function About() {
   return (
     <section className="wrap section" id="about" aria-labelledby="about-title">
-      <h2 id="about-title">About</h2>
+      <h2 id="about-title" data-reveal="">
+        About
+      </h2>
       <div className="about-grid">
         <div>
-          <p className="first" data-highlightable="">I joined ImagineArt as a product manager in April 2026, and I’ve been shipping AI features in Chatly since.</p>
-          <p data-highlightable="">
+          <p className="first" data-highlightable="" data-reveal="">I’ve been a product manager since April 2026, mostly on AI features, from the first spec through to launch.</p>
+          <p data-highlightable="" data-reveal="">
             Before that I worked on product engineering at LootMart, on caching, pagination and the admin dashboard, and built websites for
             clients at WeZero Studios.
           </p>
-          <p data-highlightable="">
+          <p data-highlightable="" data-reveal="">
             I like projects where I can write the spec and then help build it. Most of what I make outside work is tooling for coding agents.
           </p>
         </div>
         <ul className="cv">
           {experience.map((e) => (
-            <li key={e.role}>
+            <li key={e.role} data-reveal="">
               <strong>{e.role}</strong>
               <span>{e.when}</span>
             </li>

@@ -48,7 +48,6 @@ export default function Page() {
         { label: "Language", value: "Rust" },
         { label: "License", value: "MIT" },
         { label: "Runs on", value: "macOS (APFS) and Linux (btrfs, XFS)" },
-        { label: "Year", value: "2026" },
         { label: "Source", value: <a className="link" href="https://github.com/asjad3/timefork">github.com/asjad3/timefork</a> },
       ]}
     >

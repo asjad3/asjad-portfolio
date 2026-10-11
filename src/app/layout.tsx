@@ -38,9 +38,9 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = { themeColor: "#fbfbfa", width: "device-width", initialScale: 1 };
 
-// Before paint: lets the highlighters swipe in only when JS runs. If the app never hydrates,
-// everything is inked after 2.5 s so no highlight stays hidden.
-const boot = `(function(){var d=document.documentElement;d.classList.add('js');setTimeout(function(){if(!d.classList.contains('hydrated'))document.querySelectorAll('[data-scope]').forEach(function(s){s.classList.add('inked')})},2500)})()`;
+// Before paint: turns on motion unless the visitor prefers reduced motion or saves data. If the app never
+// hydrates, the highlighters and drawings are finished after 2.5 s so nothing stays hidden.
+const boot = `(function(){var d=document.documentElement;d.classList.add('js');var c=navigator.connection;if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&!(c&&c.saveData))d.classList.add('motion');setTimeout(function(){if(d.classList.contains('hydrated'))return;var q=function(s,k){document.querySelectorAll(s).forEach(function(e){k.forEach(function(x){e.classList.add(x)})})};q('[data-scope]',['inked']);q('[data-living]',['drawn','done','still'])},2500)})()`;
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (

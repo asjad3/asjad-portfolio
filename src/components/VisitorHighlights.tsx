@@ -66,17 +66,16 @@ export function VisitorHighlights() {
   return (
     <ul className="vh-list" aria-live="polite">
       {items.map((h) => (
-        <li key={h.id}>
+        <li key={h.id} data-reveal="">
           <blockquote>
             <mark className="ink" data-ink={h.ink}>{h.quote}</mark>
           </blockquote>
           {h.note ? <p className="vh-note">{h.note}</p> : null}
           <p className="vh-meta">
-            {where(h)} · {ago(h.createdAt)}
+            {where(h)}, {ago(h.createdAt)}
             {pages[h.path] ? (
               <>
-                {" "}
-                · on{" "}
+                , on{" "}
                 <a className="link" href={h.path}>
                   {pages[h.path]}
                 </a>

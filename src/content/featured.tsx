@@ -16,9 +16,8 @@ export function Featured() {
       <Project
         id="ai-sheets"
         name="AI Sheets"
-        meta="Chatly · Feature lead · 2026"
         actions={[
-          { label: "Try it on Chatly", href: "https://chatly.ai/agent/sheets" },
+          { label: "Try AI Sheets", href: "https://chatly.ai/agent/sheets" },
           { label: "More about AI Sheets", href: "/work/ai-sheets" },
         ]}
         proof={<SheetsShot />}
@@ -33,7 +32,6 @@ export function Featured() {
       <Project
         id="timefork"
         name="timefork"
-        meta="Open source · Rust · 2026"
         actions={[
           { label: "Source on GitHub", href: "https://github.com/asjad3/timefork" },
           { label: "More about timefork", href: "/work/timefork" },
@@ -47,7 +45,8 @@ export function Featured() {
         drawing={<TimeforkDrawing />}
       >
         Coding agents sometimes delete or overwrite things git never tracked, like build output, node_modules or a local database.
-        timefork takes a snapshot of the whole project folder <Claim k="before" ink="lemon">before each change an agent makes</Claim>,
+        timefork, an open-source tool I wrote in Rust, snapshots the whole project folder{" "}
+        <Claim k="before" ink="lemon">before each change an agent makes</Claim>,
         using the file system’s <Claim k="cow" ink="rose">copy-on-write clones</Claim>, so you can go back to any point or branch from it.
         On an 18 GB project a snapshot takes <Claim k="speed" ink="sky">0.9 seconds</Claim> and almost no extra disk space.
       </Project>
@@ -55,7 +54,6 @@ export function Featured() {
       <Project
         id="gallerist"
         name="Gallerist"
-        meta="Web app · 2026"
         actions={[
           { label: "Open Gallerist", href: "https://galleristapp.vercel.app" },
           { label: "More about Gallerist", href: "/work/gallerist" },
