@@ -6,6 +6,7 @@ import { Highlighter } from "@/components/Highlighter";
 import { Interactions } from "@/components/Interactions";
 import { JsonLd } from "@/components/JsonLd";
 import { MoreProjects } from "@/components/MoreProjects";
+import { Motion } from "@/components/Motion";
 import { VisitorHighlights } from "@/components/VisitorHighlights";
 import { Featured } from "@/content/featured";
 import { personId, site, websiteId } from "@/lib/site";
@@ -69,20 +70,25 @@ export default function Home() {
       <main id="main">
         <Hero />
         <section className="wrap section" id="work" aria-labelledby="work-title">
-          <h2 id="work-title">Selected work</h2>
+          <h2 id="work-title" data-reveal="">
+            Selected work
+          </h2>
           <Featured />
         </section>
         <MoreProjects />
         <About />
         <section className="wrap section" id="highlights" aria-labelledby="highlights-title">
-          <h2 id="highlights-title">Highlights from visitors</h2>
-          <p className="vh-intro">Select any line on this site to highlight it, and leave a note if you like. The latest ones show up here.</p>
+          <h2 id="highlights-title" data-reveal="">
+            Highlights from visitors
+          </h2>
+          <p className="vh-intro" data-reveal="">Select any line on this site to highlight it, and leave a note if you like. The latest ones show up here.</p>
           <VisitorHighlights />
         </section>
       </main>
       <Footer />
       <Interactions />
       <Highlighter />
+      <Motion />
       <JsonLd data={structuredData} />
     </>
   );

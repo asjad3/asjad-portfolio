@@ -12,8 +12,16 @@ export function Interactions() {
     const scopes = [...document.querySelectorAll<HTMLElement>("[data-scope]")];
 
     const io = new IntersectionObserver(
-      (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add("inked")),
-      { threshold: 0.25 },
+      (entries) =>
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
+          io.unobserve(e.target);
+          const claims = [...e.target.querySelectorAll<HTMLElement>("mark.claim")];
+          claims.forEach((c, i) => (c.style.transitionDelay = `${400 + i * 260}ms, 0ms`));
+          e.target.classList.add("inked");
+          window.setTimeout(() => claims.forEach((c) => (c.style.transitionDelay = "")), 400 + claims.length * 260 + 900);
+        }),
+      { rootMargin: "0px 0px -25% 0px" },
     );
     scopes.forEach((s) => io.observe(s));
 

@@ -4,6 +4,7 @@ import { Footer } from "./Footer";
 import { Header } from "./Header";
 import { Highlighter } from "./Highlighter";
 import { JsonLd } from "./JsonLd";
+import { Motion } from "./Motion";
 
 type Fact = { label: string; value: ReactNode };
 
@@ -26,17 +27,17 @@ export function ProjectPage({
       <a className="skip" href="#main">Skip to content</a>
       <Header />
       <main id="main" className="wrap page">
-        <nav aria-label="Breadcrumb">
+        <nav aria-label="Breadcrumb" data-enter="">
           <Link className="crumb link" href="/#work">
             ← All work
           </Link>
         </nav>
         <article>
-          <h1>{name}</h1>
-          <p className="lede" data-highlightable="">
+          <h1 data-enter="1">{name}</h1>
+          <p className="lede" data-highlightable="" data-enter="2">
             {lede}
           </p>
-          <div className="page-grid">
+          <div className="page-grid" data-enter="3">
             <div className="prose" data-highlightable="">
               {children}
             </div>
@@ -53,6 +54,7 @@ export function ProjectPage({
       </main>
       <Footer />
       <Highlighter />
+      <Motion />
       <JsonLd data={data} />
     </>
   );

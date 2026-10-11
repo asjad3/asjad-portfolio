@@ -47,7 +47,6 @@ export default function Page() {
       facts={[
         { label: "Type", value: "Web app" },
         { label: "Price", value: "Free, no sign-up" },
-        { label: "Year", value: "2026" },
         { label: "Open it", value: <a className="link" href="https://galleristapp.vercel.app">galleristapp.vercel.app</a> },
       ]}
     >

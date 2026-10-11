@@ -129,8 +129,7 @@ mark.claim, mark.ink, mark.visitor {
 .p-drawing { grid-area: drawing; align-self: start; }
 .p-proof { grid-area: proof; align-self: start; position: sticky; top: 96px; display: flex; flex-direction: column; gap: 16px; min-width: 0; }
 .project h3 { font-size: clamp(30px, 3.2vw, 42px); line-height: 1.05; font-weight: 800; letter-spacing: -0.03em; }
-.project .meta { margin-top: 6px; font-size: 16px; color: var(--pencil); }
-.project p { margin-top: 18px; color: var(--lead); }
+.project p { margin-top: 16px; color: var(--lead); }
 .project p mark.claim { color: var(--graphite); }
 .project .actions { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 8px 24px; font-weight: 600; font-size: 17px; }
 
@@ -153,12 +152,11 @@ pre.code .ln[data-ink] { background: color-mix(in oklab, var(--c) 72%, transpare
 
 /* ───────── more projects ───────── */
 .list { list-style: none; border-top: 1px solid var(--rule); }
-.list li { display: grid; grid-template-columns: 210px minmax(0, 1fr) 190px 120px; gap: 8px 28px; align-items: baseline; padding: 20px 0; border-bottom: 1px solid var(--rule); }
+.list li { display: grid; grid-template-columns: 210px minmax(0, 1fr) 120px; gap: 8px 28px; align-items: baseline; padding: 20px 0; border-bottom: 1px solid var(--rule); }
 .list .name { font-size: 19px; font-weight: 800; letter-spacing: -0.01em; }
 .list p { color: var(--lead); }
-.list .role { font-size: 16px; color: var(--pencil); }
 .list .go { font-weight: 600; font-size: 16px; white-space: nowrap; justify-self: end; }
-@media (max-width: 1100px) and (min-width: 961px) { .list li { grid-template-columns: 170px minmax(0, 1fr) 160px 100px; } }
+@media (max-width: 1100px) and (min-width: 961px) { .list li { grid-template-columns: 170px minmax(0, 1fr) 100px; } }
 .list-head { margin: 48px 0 12px; font-size: 22px; font-weight: 800; letter-spacing: -0.015em; }
 
 /* ───────── about ───────── */
@@ -228,6 +226,43 @@ pre.code .ln[data-ink] { background: color-mix(in oklab, var(--c) 72%, transpare
 @media (pointer: coarse), (max-width: 560px) {
   .hl-trigger { position: fixed; left: 50% !important; top: auto !important; bottom: calc(18px + env(safe-area-inset-bottom)); }
   .hl-pop { position: fixed; left: 12px !important; right: 12px; top: auto !important; bottom: calc(12px + env(safe-area-inset-bottom)); width: auto; max-width: none; }
+}
+
+/* ───────── motion ─────────
+   Only with the `motion` class: the boot script sets it unless the visitor prefers reduced motion or saves data. */
+@keyframes rise { from { opacity: 0; transform: translateY(18px); } }
+/* above the fold: rises in on first paint, without waiting for JS */
+.motion [data-enter] { animation: rise 0.9s var(--ease) backwards; }
+.motion [data-enter="1"] { animation-delay: 90ms; }
+.motion [data-enter="2"] { animation-delay: 180ms; }
+.motion [data-enter="3"] { animation-delay: 270ms; }
+/* below the fold: Motion.tsx holds it back, then lets it rise in as it scrolls into view */
+.motion .hold { opacity: 0; transform: translateY(18px); }
+.motion .hold.in { opacity: 1; transform: none; transition: opacity 0.8s var(--ease), transform 1s var(--ease); transition-delay: var(--d, 0ms); }
+
+.living { position: relative; }
+.living > img { transition: opacity 0.6s ease; }
+.living .clip { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: none; pointer-events: none; transition: opacity 0.6s ease; }
+.motion .living.has-clip .clip { display: block; }
+.motion .living.has-clip:not(.still) > img { opacity: 0; }
+.motion .living.has-clip.still .clip { opacity: 0; }
+/* drawings without a clip are revealed with a pencil sweep, left to right */
+.motion .living:not(.has-clip) > img {
+  -webkit-mask-image: linear-gradient(100deg, #000 42%, transparent 58%);
+  mask-image: linear-gradient(100deg, #000 42%, transparent 58%);
+  -webkit-mask-size: 300% 100%;
+  mask-size: 300% 100%;
+  -webkit-mask-position: 100% 0;
+  mask-position: 100% 0;
+}
+.motion .living.drawn:not(.has-clip) > img { -webkit-mask-position: 0 0; mask-position: 0 0; transition: -webkit-mask-position 1.6s var(--ease), mask-position 1.6s var(--ease); }
+/* highlighter marks wait until the drawing is finished */
+.motion .living:not(.done) .mark { transform: scaleX(0); }
+
+@media print {
+  .motion .hold { opacity: 1; transform: none; }
+  .motion .living > img { opacity: 1; -webkit-mask: none; mask: none; }
+  .living .clip { display: none !important; }
 }
 
 /* ───────── responsive ───────── */

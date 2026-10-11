@@ -27,6 +27,23 @@ npm start        # serve the build
 | `public/llms.txt`, `public/llms-full.txt` | Plain-text summaries for language models |
 | `public/og*.png` | Share images |
 | `src/assets/plates/` | Pencil drawings generated with ImagineArt, toned to the page colours |
+| `src/components/Motion.tsx`, `Living.tsx` | Scroll reveals and the drawings that come to life |
+| `public/motion/` | Video clips for the drawings, and their posters |
+
+## Motion
+
+- The hero and the top of each project page rise in with CSS on first paint (`data-enter`), so they don't wait for JavaScript.
+- Further down, `Motion.tsx` holds back blocks that start below the fold (`data-reveal`, and every child of `.prose`), then lets them rise in as they scroll into view. Anything already on screen is left alone.
+- Drawings are wrapped in `Living`. With a clip, the clip plays once when the drawing is in view and rests on its last frame. Without one, the drawing is revealed with a pencil sweep. Highlighter marks on a drawing ink once it's finished.
+- None of this runs when the visitor prefers reduced motion or has data saver on. They see the finished drawings, and without JavaScript everything is simply there.
+
+**Adding a clip.** Make it from the drawing with an image-to-video model, then tone it to the page colours:
+
+```sh
+python3 scripts/tone-clip.py raw.mp4 public/motion/NAME.mp4 public/motion/NAME-poster.webp
+```
+
+Pass `clip={{ src: "/motion/NAME.mp4", poster: "/motion/NAME-poster.webp" }}` to the drawing's `Living`. If the clip ends somewhere other than the still drawing, add `settle="still"` so it fades back to the still at the end, or check the highlighter boxes against the last frame.
 
 ## Visitor highlights
 

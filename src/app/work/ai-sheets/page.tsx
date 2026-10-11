@@ -4,7 +4,7 @@ import { SheetsDrawing, SheetsShot } from "@/content/figures";
 import { personId, site } from "@/lib/site";
 
 const description =
-  "AI Sheets is the spreadsheet agent in Chatly. It turns a single prompt into a multi-sheet workbook with formulas, pivot tables and charts. Asjad Abbas was the feature lead from the first prototype to launch.";
+  "AI Sheets is a spreadsheet agent that turns a single prompt into a multi-sheet workbook with formulas, pivot tables and charts. Asjad Abbas was the feature lead from the first prototype to launch.";
 
 export const metadata: Metadata = {
   title: "AI Sheets",
@@ -41,12 +41,11 @@ export default function Page() {
   return (
     <ProjectPage
       name="AI Sheets"
-      lede="A spreadsheet agent in Chatly that turns a single prompt into a working, multi-sheet workbook. I was the feature lead from the first prototype to launch."
+      lede="A spreadsheet agent that turns a single prompt into a working, multi-sheet workbook. I was the feature lead from the first prototype to launch."
       data={data}
       facts={[
         { label: "Role", value: "Feature lead (product manager)" },
         { label: "Company", value: "Chatly by ImagineArt" },
-        { label: "Year", value: "2026" },
         { label: "Status", value: "Live" },
         { label: "Try it", value: <a className="link" href="https://chatly.ai/agent/sheets">chatly.ai/agent/sheets</a> },
       ]}

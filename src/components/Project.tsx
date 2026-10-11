@@ -8,7 +8,6 @@ type Action = { label: string; href: string };
 export function Project({
   id,
   name,
-  meta,
   children,
   actions,
   proof,
@@ -16,7 +15,6 @@ export function Project({
 }: {
   id: string;
   name: string;
-  meta: string;
   children: ReactNode;
   actions: Action[];
   proof: ReactNode;
@@ -25,10 +23,13 @@ export function Project({
   return (
     <Scope as="article" className="project">
       <div className="p-text">
-        <h3 id={id}>{name}</h3>
-        <p className="meta">{meta}</p>
-        <p data-highlightable="">{children}</p>
-        <p className="actions">
+        <h3 id={id} data-reveal="">
+          {name}
+        </h3>
+        <p data-highlightable="" data-reveal="">
+          {children}
+        </p>
+        <p className="actions" data-reveal="">
           {actions.map((a) =>
             a.href.startsWith("/") ? (
               <Link key={a.href} className="link" href={a.href}>
@@ -42,7 +43,9 @@ export function Project({
           )}
         </p>
       </div>
-      <div className="p-proof">{proof}</div>
+      <div className="p-proof" data-reveal="">
+        {proof}
+      </div>
       <div className="p-drawing">{drawing}</div>
     </Scope>
   );

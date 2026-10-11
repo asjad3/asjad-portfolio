@@ -5,6 +5,7 @@ import sheetsPlate from "@/assets/plates/sheets.webp";
 import timeforkPlate from "@/assets/plates/timefork.webp";
 import galleristPlate from "@/assets/plates/gallerist.webp";
 import { Mark } from "@/components/ink";
+import { Living } from "@/components/Living";
 
 // Figures shared by the home page and the project pages.
 // With `marks`, highlighter swipes pair parts of the image with phrases in the text.
@@ -15,7 +16,7 @@ export function SheetsShot({ marks = true }: { marks?: boolean }) {
   return (
     <figure className="frame">
       <div className="shot dark">
-        <Image src={chatlySheets} alt="The AI Sheets page in Chatly: a prompt box in Sheets mode above a grid of workbook templates." sizes={half} />
+        <Image src={chatlySheets} alt="The AI Sheets page: a prompt box in Sheets mode above a grid of workbook templates." sizes={half} />
         {marks && <Mark k="prompt" ink="lemon" box={[32, 28.5, 54, 12.5]} />}
         {marks && <Mark k="sheets" ink="rose" box={[32, 47.5, 54, 52]} />}
       </div>
@@ -23,7 +24,6 @@ export function SheetsShot({ marks = true }: { marks?: boolean }) {
         <a className="link" href="https://chatly.ai/agent/sheets" {...(marks ? { "data-ev": "live", "data-ink": "mint" } : {})}>
           chatly.ai/agent/sheets
         </a>
-        <span>Live in Chatly</span>
       </figcaption>
     </figure>
   );
@@ -31,11 +31,10 @@ export function SheetsShot({ marks = true }: { marks?: boolean }) {
 
 export function SheetsDrawing({ marks = true }: { marks?: boolean }) {
   return (
-    <figure className="drawing">
-      <Image src={sheetsPlate} alt="Pencil drawing of a one-line prompt above an exploded stack of spreadsheet layers and a bar chart." sizes={half} />
+    <Living still={sheetsPlate} alt="Pencil drawing of a one-line prompt above an exploded stack of spreadsheet layers and a bar chart." sizes={half}>
       {marks && <Mark k="prompt" ink="lemon" box={[30, 1, 39, 10]} />}
       {marks && <Mark k="sheets" ink="rose" box={[23, 14, 53, 84]} />}
-    </figure>
+    </Living>
   );
 }
 
@@ -91,10 +90,9 @@ export function TimeforkBench({ marks = true }: { marks?: boolean }) {
 
 export function TimeforkDrawing({ marks = true }: { marks?: boolean }) {
   return (
-    <figure className="drawing">
-      <Image src={timeforkPlate} alt="Pencil drawing of a stack of identical project snapshots, one of which branches into four copies." sizes={half} />
+    <Living still={timeforkPlate} alt="Pencil drawing of a stack of identical project snapshots, one of which branches into four copies." sizes={half}>
       {marks && <Mark k="before" ink="lemon" box={[5, 10, 24, 81]} />}
-    </figure>
+    </Living>
   );
 }
 
@@ -109,7 +107,6 @@ export function GalleristShot({ marks = true }: { marks?: boolean }) {
       </div>
       <figcaption>
         <a className="link" href="https://galleristapp.vercel.app">galleristapp.vercel.app</a>
-        <span>Free, in the browser</span>
       </figcaption>
     </figure>
   );
@@ -117,9 +114,8 @@ export function GalleristShot({ marks = true }: { marks?: boolean }) {
 
 export function GalleristDrawing({ marks = true }: { marks?: boolean }) {
   return (
-    <figure className="drawing">
-      <Image src={galleristPlate} alt="Pencil drawing of seven empty frames hung together on a gallery wall, with a visitor for scale." sizes={half} />
+    <Living still={galleristPlate} alt="Pencil drawing of seven empty frames hung together on a gallery wall, with a visitor for scale." sizes={half}>
       {marks && <Mark k="layouts" ink="lemon" box={[21, 5, 58, 75]} />}
-    </figure>
+    </Living>
   );
 }

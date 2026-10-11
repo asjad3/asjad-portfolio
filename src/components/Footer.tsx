@@ -1,12 +1,14 @@
-import Image from "next/image";
+import { Living } from "./Living";
 import hills from "@/assets/plates/hills.webp";
 import { site } from "@/lib/site";
 
 export function Footer() {
   return (
     <footer className="wrap foot">
-      <Image src={hills} alt="Pencil drawing of the Margalla Hills above Islamabad." className="hills" sizes="(max-width: 1200px) 100vw, 1100px" />
-      <div className="foot-row">
+      <div className="hills">
+        <Living still={hills} alt="Pencil drawing of the Margalla Hills above Islamabad." sizes="(max-width: 1200px) 100vw, 1100px" />
+      </div>
+      <div className="foot-row" data-reveal="">
         <p>
           {site.name}, {site.city}, {site.country}
         </p>
