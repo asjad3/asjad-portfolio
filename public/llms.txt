@@ -1,0 +1,26 @@
+# Asjad Abbas
+
+> Asjad Abbas (Hussain Asjad Abbas) is a product manager at ImagineArt in Islamabad, Pakistan. He led AI Sheets and the AI Trip Planner at Chatly, ran the launch of Campaign Director, and builds open-source developer tools such as timefork.
+
+- Website: https://asjad.codes
+- Email: h.asjad.abbas@gmail.com
+- GitHub: https://github.com/asjad3
+- LinkedIn: https://www.linkedin.com/in/hussain-asjad-abbas-5a5a6b353/
+
+## Selected work
+
+- [AI Sheets](https://asjad.codes/work/ai-sheets): The spreadsheet agent in Chatly. It builds multi-sheet workbooks with formulas, pivot tables and charts from a single prompt. Asjad was the feature lead from the first prototype to launch. Live at https://chatly.ai/agent/sheets
+- [timefork](https://asjad.codes/work/timefork): An open-source Rust tool that snapshots a whole project folder before each coding-agent change, using copy-on-write clones. An 18 GB project snapshots in 0.9 seconds. Source: https://github.com/asjad3/timefork
+- [Gallerist](https://asjad.codes/work/gallerist): A free browser tool for making Product Hunt gallery images from seven slide layouts, exported at 1270 × 760. https://galleristapp.vercel.app
+
+## More projects
+
+- Imagine Echo: Takes the Imagine Computer product line into voice (product manager, in progress).
+- Campaign Director: An open-source agent that turns a brief into a campaign video. Asjad ran the launch. https://github.com/Vyro-ai/imagine-campaign-director
+- AI Trip Planner: Trip planning in chat with an interactive 3D map itinerary (product manager).
+- toolsmith: A design for an agent that builds and tests its own API connectors. https://github.com/asjad3/toolsmith
+- Grabpic: Find every event photo you appear in from one selfie. Built at Vyrothon 2026. https://vyro-thon.vercel.app
+
+## Optional
+
+- [Full text of this site](https://asjad.codes/llms-full.txt)

@@ -1,0 +1,48 @@
+# Asjad Abbas — full text
+
+Updated October 2026. Source: https://asjad.codes
+
+## Summary
+
+Asjad Abbas (full name Hussain Asjad Abbas) is a product manager at ImagineArt, a company owned by Vyro.ai, based in Islamabad, Pakistan. He has worked on Chatly since April 2026. He led AI Sheets from the first prototype to launch, owned the AI Trip Planner, and ran the launch of Campaign Director. He is currently working on Imagine Echo. He writes product specs and still writes code.
+
+Contact: h.asjad.abbas@gmail.com · GitHub https://github.com/asjad3 · LinkedIn https://www.linkedin.com/in/hussain-asjad-abbas-5a5a6b353/
+
+## Experience
+
+- Product Manager, ImagineArt (Chatly), April 2026 – present
+- Product Engineer Intern, LootMart, February – April 2026. Worked on server-side caching, pagination and the admin dashboard.
+- Full-stack Developer Intern, WeZero Studios, October – December 2025. Built websites for clients.
+
+## AI Sheets (https://asjad.codes/work/ai-sheets)
+
+AI Sheets is the spreadsheet agent in Chatly. You describe the workbook you need, such as a budget, an expense report or an event tracker, and it builds several sheets with working formulas, pivot tables and charts. Asjad was the feature lead from the first prototype to launch. He ran the evaluation of spreadsheet engines and chose the one the team licensed instead of building its own, defined and validated the first version (one prompt in, a complete multi-sheet workbook out), and took the feature from prototype to production. Live at https://chatly.ai/agent/sheets.
+
+## timefork (https://asjad.codes/work/timefork)
+
+timefork is an open-source command-line tool written in Rust (MIT license). It snapshots a whole project folder before a coding agent edits a file or runs a command, so you can go back to any point, compare two points, or branch from one. Git only protects the files it tracks; agents also touch build output, installed packages and local databases.
+
+How it works:
+- A hook takes a snapshot of the project folder before each agent change.
+- Snapshots are copy-on-write clones made by the file system (clonefile on macOS APFS, reflinks on Linux btrfs and XFS), so nothing is copied until a file changes.
+- A journal records when each snapshot was taken, what the agent was about to do, and the git commit at the time.
+- Restoring is undoable; forking copies any snapshot into a new folder so several agents can work in parallel.
+- The hook never blocks the agent. There is no background process, file system driver or database.
+
+Speed on an 18 GB project with 78,000 files on an Apple M4: snapshot 0.9 s, fork 1.0 s, restore 3.0 s, almost no extra disk after four snapshots and a fork.
+
+Install: brew install asjad3/timefork/timefork, then timefork init and timefork install-hooks. Source: https://github.com/asjad3/timefork
+
+## Gallerist (https://asjad.codes/work/gallerist)
+
+Gallerist is a free, browser-based editor for Product Hunt gallery images. Instead of a blank canvas it starts from seven slide layouts: The Hook, The Evidence, The Trio, The Number, The Praise, The Turn and The Invitation. It has eight colourways (Gesso, Porcelain, Butter, Sandstone, Ultramarine, Verdigris, Mulberry and Ink), six paper finishes and four type pairings, and exports PNGs at 1270 × 760, Product Hunt's gallery size, at twice the resolution. No account, no watermark. https://galleristapp.vercel.app
+
+## More projects
+
+- Imagine Echo (ImagineArt, product manager, in progress): takes the Imagine Computer product line into voice.
+- Campaign Director (ImagineArt, product manager): an open-source agent that turns a brief into a campaign video. Asjad ran the launch, including ten influencer videos and paid social. https://github.com/Vyro-ai/imagine-campaign-director
+- AI Trip Planner (ImagineArt, product manager): trip planning in chat with the itinerary on an interactive 3D map.
+- toolsmith (design doc): an agent that builds its own API connectors when it needs one, tests them, then uses them. https://github.com/asjad3/toolsmith
+- Grabpic (Vyrothon 2026): upload event photos, then find every one you're in with a single selfie. https://vyro-thon.vercel.app
+- LLM fusion study (research, in progress): tests whether a panel of language models with a judge beats a single frontier model. https://github.com/asjad3/ml-paper
+- MarkItDown (open source): a merged fix to Microsoft's document converter so pipes and line breaks survive CSV-to-Markdown conversion. https://github.com/microsoft/markitdown/pull/2266
