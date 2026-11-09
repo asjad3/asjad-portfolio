@@ -1,19 +1,17 @@
 import hero from "@/assets/plates/hero.webp";
 import { site } from "@/lib/site";
-import { Claim, Mark, Scope } from "./ink";
 import { Living } from "./Living";
 
 export function Hero() {
   return (
     <section className="wrap hero" aria-labelledby="name">
-      <Scope className="hero-grid">
+      <div className="hero-grid">
         <div>
           <h1 id="name" data-enter="">
             {site.name}
           </h1>
           <p className="line" data-enter="1">
-            Product manager at ImagineArt. I <Claim k="spec" ink="lemon">write product specs</Claim>, and I{" "}
-            <Claim k="code" ink="mint">still write code</Claim>.
+            Product manager at ImagineArt. I write product specs, and I still write code.
           </p>
           <p className="intro" data-enter="2">
             Since April 2026 I’ve led AI Sheets from the first prototype to launch, owned the AI Trip Planner, and ran the launch of
@@ -31,11 +29,8 @@ export function Hero() {
           priority
           sizes="(max-width: 960px) 90vw, 45vw"
           clip={{ src: "/motion/hero.mp4", poster: "/motion/hero-poster.webp" }}
-        >
-          <Mark k="spec" ink="lemon" box={[4, 22, 37, 27]} />
-          <Mark k="code" ink="mint" box={[72, 51, 27, 29]} />
-        </Living>
-      </Scope>
+        />
+      </div>
     </section>
   );
 }

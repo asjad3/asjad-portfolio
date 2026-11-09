@@ -55,14 +55,14 @@ export default function Page() {
         You describe the workbook you need, such as a budget, an expense report or an event tracker, and AI Sheets builds it: several
         sheets, working formulas, pivot tables and charts.
       </p>
-      <SheetsShot marks={false} />
+      <SheetsShot />
       <h2>What I did</h2>
       <ul>
         <li>Ran the evaluation of spreadsheet engines and chose the one we licensed, instead of building our own.</li>
         <li>Defined and validated the first version: one prompt in, a complete multi-sheet workbook out.</li>
         <li>Took the feature from prototype to production.</li>
       </ul>
-      <SheetsDrawing marks={false} />
+      <SheetsDrawing />
     </ProjectPage>
   );
 }

@@ -1,5 +1,4 @@
-/* asjad.codes — one typeface, paper and graphite, and four highlighters.
-   A highlighted phrase and the evidence for it share a colour. Colour means nothing else. */
+/* asjad.codes — one typeface, paper and graphite. */
 
 :root {
   --paper: #fbfbfa;
@@ -7,11 +6,6 @@
   --lead: #4b4e54;
   --pencil: #7c7f86;
   --rule: #e3e3df;
-
-  --lemon: #ffe94a;
-  --rose: #ff9ed2;
-  --mint: #8bf0b5;
-  --sky: #94d9ff;
 
   --sans: var(--font-sans), system-ui, sans-serif;
   --code: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
@@ -34,7 +28,7 @@ body {
 }
 a { color: inherit; }
 img { display: block; max-width: 100%; height: auto; }
-::selection { background: var(--lemon); color: var(--graphite); }
+::selection { background: var(--graphite); color: var(--paper); }
 :focus-visible { outline: 2px solid var(--graphite); outline-offset: 3px; border-radius: 3px; }
 
 .wrap { max-width: var(--wrap); margin-inline: auto; padding-inline: var(--pad); }
@@ -49,49 +43,6 @@ img { display: block; max-width: 100%; height: auto; }
 .link:hover { text-decoration-color: var(--graphite); }
 .skip { position: absolute; left: -9999px; top: 8px; background: var(--graphite); color: var(--paper); padding: 8px 12px; border-radius: 6px; z-index: 50; }
 .skip:focus { left: 12px; }
-
-/* ───────── highlighter ───────── */
-[data-ink="lemon"] { --c: var(--lemon); }
-[data-ink="rose"] { --c: var(--rose); }
-[data-ink="mint"] { --c: var(--mint); }
-[data-ink="sky"] { --c: var(--sky); }
-
-mark.claim, mark.ink {
-  color: inherit;
-  background-color: transparent;
-  background-image: linear-gradient(100deg, transparent 0.5%, var(--c) 2%, color-mix(in oklab, var(--c) 80%, transparent) 48%, var(--c) 96%, transparent 99%);
-  background-size: 100% 76%;
-  background-position: 0 72%;
-  background-repeat: no-repeat;
-  border-radius: 4px 10px 5px 9px;
-  padding: 0 0.12em;
-  margin: 0 -0.06em;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-  transition: background-size 0.75s var(--ease), opacity 0.2s;
-}
-/* With JS, the ink swipes on as each block enters view. Without JS it is simply there. */
-.js [data-scope]:not(.inked) mark.claim { background-size: 0% 76%; }
-.focus mark.claim:not(.on) { opacity: 0.4; }
-
-.mark {
-  position: absolute;
-  background: var(--c);
-  mix-blend-mode: multiply;
-  border-radius: 10px 22px 14px 26px;
-  opacity: 0.5;
-  transform-origin: left center;
-  transition: opacity 0.2s, transform 0.75s var(--ease);
-  pointer-events: none;
-}
-.js [data-scope]:not(.inked) .mark { transform: scaleX(0); }
-.mark.on { opacity: 0.95; }
-.focus .mark:not(.on) { opacity: 0.1; }
-.dark .mark { mix-blend-mode: screen; opacity: 0.36; }
-.dark .mark.on { opacity: 0.7; }
-.focus .dark .mark:not(.on) { opacity: 0.06; }
-[data-ev] { transition: opacity 0.2s, background-color 0.2s; }
-.focus [data-ev]:not(.on):not(.mark) { opacity: 0.4; }
 
 /* ───────── header ───────── */
 .top { position: sticky; top: 0; z-index: 20; background: var(--paper); border-bottom: 1px solid var(--rule); }
@@ -130,25 +81,21 @@ mark.claim, mark.ink {
 .p-proof { grid-area: proof; align-self: start; position: sticky; top: 96px; display: flex; flex-direction: column; gap: 16px; min-width: 0; }
 .project h3 { font-size: clamp(30px, 3.2vw, 42px); line-height: 1.05; font-weight: 800; letter-spacing: -0.03em; }
 .project p { margin-top: 16px; color: var(--lead); }
-.project p mark.claim { color: var(--graphite); }
 .project .actions { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 8px 24px; font-weight: 600; font-size: 17px; }
 
 .frame { position: relative; border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; background: #fff; }
 .frame figcaption { padding: 10px 14px; border-top: 1px solid var(--rule); font-size: 14px; color: var(--pencil); display: flex; justify-content: space-between; gap: 12px; }
 .frame figcaption.head { border-top: 0; border-bottom: 1px solid var(--rule); }
-.frame figcaption [data-ink] { color: var(--graphite); background: color-mix(in oklab, var(--c) 75%, transparent); padding: 0 6px; border-radius: 4px; }
 .shot { position: relative; }
 
 pre.code { font: 13px/1.75 var(--code); color: var(--lead); padding: 12px 0; overflow-x: auto; background: #fff; }
 pre.code .ln { display: block; padding: 0 16px; }
 pre.code .k { color: var(--graphite); font-weight: 600; }
-pre.code .ln[data-ink] { background: color-mix(in oklab, var(--c) 72%, transparent); }
 
 .bench { width: 100%; border-collapse: collapse; font-size: 15px; font-variant-numeric: tabular-nums; background: #fff; }
 .bench td { padding: 10px 16px; border-top: 1px solid var(--rule); color: var(--lead); }
 .bench tr:first-child td { border-top: 0; }
 .bench td:last-child { text-align: right; color: var(--graphite); font-weight: 700; white-space: nowrap; }
-.bench tr[data-ink] td { background: color-mix(in oklab, var(--c) 72%, transparent); }
 
 /* ───────── more projects ───────── */
 .list { list-style: none; border-top: 1px solid var(--rule); }
@@ -223,8 +170,6 @@ pre.code .ln[data-ink] { background: color-mix(in oklab, var(--c) 72%, transpare
   mask-position: 100% 0;
 }
 .motion .living.drawn:not(.has-clip) > img { -webkit-mask-position: 0 0; mask-position: 0 0; transition: -webkit-mask-position 1.6s var(--ease), mask-position 1.6s var(--ease); }
-/* highlighter marks wait until the drawing is finished */
-.motion .living:not(.done) .mark { transform: scaleX(0); }
 
 @media print {
   .motion .hold { opacity: 1; transform: none; }

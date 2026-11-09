@@ -1,6 +1,5 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { Scope } from "./ink";
 
 type Action = { label: string; href: string };
 
@@ -21,7 +20,7 @@ export function Project({
   drawing: ReactNode;
 }) {
   return (
-    <Scope as="article" className="project">
+    <article className="project">
       <div className="p-text">
         <h3 id={id} data-reveal="">
           {name}
@@ -47,6 +46,6 @@ export function Project({
         {proof}
       </div>
       <div className="p-drawing">{drawing}</div>
-    </Scope>
+    </article>
   );
 }
