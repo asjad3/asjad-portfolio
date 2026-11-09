@@ -15,7 +15,7 @@ export function MoreProjects() {
             {g.items.map((item) => (
               <li key={item.name} data-reveal="">
                 <h4 className="name">{item.name}</h4>
-                <p data-highlightable="">{item.description}</p>
+                <p>{item.description}</p>
                 {item.link ? (
                   <a className="go link" href={item.link.href}>
                     {item.link.label} ↗
