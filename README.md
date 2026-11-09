@@ -45,6 +45,10 @@ python3 scripts/tone-clip.py raw.mp4 public/motion/NAME.mp4 public/motion/NAME-p
 
 Pass `clip={{ src: "/motion/NAME.mp4", poster: "/motion/NAME-poster.webp" }}` to the drawing's `Living`. If the clip ends somewhere other than the still drawing, add `settle="still"` so it fades back to the still at the end, or check the highlighter boxes against the last frame.
 
+## Analytics
+
+PostHog, through `src/instrumentation-client.ts`. It only loads when `NEXT_PUBLIC_POSTHOG_KEY` is set, and waits until the browser is idle so it doesn't slow the first paint. Requests go through `/ingest` on this domain, proxied to PostHog by the rewrites in `next.config.ts`. Set `NEXT_PUBLIC_POSTHOG_REGION=eu` for an EU project. See `.env.example`.
+
 ## Rules
 
 - One typeface: Atkinson Hyperlegible Next. No monospace UI text. Code samples use the system monospace.
