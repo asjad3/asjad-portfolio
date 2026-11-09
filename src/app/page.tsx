@@ -2,7 +2,6 @@ import { About } from "@/components/About";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { Interactions } from "@/components/Interactions";
 import { JsonLd } from "@/components/JsonLd";
 import { MoreProjects } from "@/components/MoreProjects";
 import { Motion } from "@/components/Motion";
@@ -77,7 +76,6 @@ export default function Home() {
         <About />
       </main>
       <Footer />
-      <Interactions />
       <Motion />
       <JsonLd data={structuredData} />
     </>

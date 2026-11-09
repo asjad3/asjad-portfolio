@@ -56,7 +56,7 @@ export default function Page() {
         Git only protects the files it tracks. Coding agents also touch build output, installed packages and local databases, and they run
         shell commands whose effects git can’t roll back. When something goes wrong halfway through a session, there’s no clean way back.
       </p>
-      <TimeforkDrawing marks={false} />
+      <TimeforkDrawing />
       <h2>How it works</h2>
       <ul>
         <li>Before an agent edits a file or runs a command, a hook snapshots the project folder.</li>
@@ -70,10 +70,10 @@ export default function Page() {
         <li>The hook never blocks the agent. If a snapshot fails, the agent carries on.</li>
         <li>There’s no background process, file system driver or database.</li>
       </ul>
-      <TimeforkCode marks={false} />
+      <TimeforkCode />
       <h2>Speed</h2>
       <p>Measured on a real 18 GB project with 78,000 files on an Apple M4.</p>
-      <TimeforkBench marks={false} />
+      <TimeforkBench />
       <h2>Install</h2>
       <p>
         <code>brew install asjad3/timefork/timefork</code>, then run <code>timefork init</code> and <code>timefork install-hooks</code> in a

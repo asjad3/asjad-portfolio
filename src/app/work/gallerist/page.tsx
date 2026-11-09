@@ -55,13 +55,13 @@ export default function Page() {
         The Hook, The Evidence, The Trio, The Number, The Praise, The Turn and The Invitation. Each one covers a different part of a launch
         story, from the main claim at the start to the invitation at the end.
       </p>
-      <GalleristDrawing marks={false} />
+      <GalleristDrawing />
       <h2>Styles</h2>
       <p>
         Eight colourways (Gesso, Porcelain, Butter, Sandstone, Ultramarine, Verdigris, Mulberry and Ink), six paper finishes and four type
         pairings. A style can apply to the whole gallery or to one slide.
       </p>
-      <GalleristShot marks={false} />
+      <GalleristShot />
       <h2>Export</h2>
       <p>
         Slides export as PNGs at 1270 × 760, the size Product Hunt uses for gallery images, at twice the resolution so they stay sharp. There’s

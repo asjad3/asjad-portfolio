@@ -1,5 +1,4 @@
 import { Project } from "@/components/Project";
-import { Claim } from "@/components/ink";
 import {
   GalleristDrawing,
   GalleristShot,
@@ -23,9 +22,9 @@ export function Featured() {
         proof={<SheetsShot />}
         drawing={<SheetsDrawing />}
       >
-        AI Sheets builds a spreadsheet <Claim k="prompt" ink="lemon">from a single prompt</Claim>, with{" "}
-        <Claim k="sheets" ink="rose">formulas, pivot tables and charts across several sheets</Claim>. I led it from the first prototype to{" "}
-        <Claim k="live" ink="mint">launch</Claim>. Early on we chose to license a spreadsheet engine instead of building our own, so the team
+        AI Sheets builds a spreadsheet from a single prompt, with
+        formulas, pivot tables and charts across several sheets. I led it from the first prototype to
+        launch. Early on we chose to license a spreadsheet engine instead of building our own, so the team
         could spend its time on the AI that writes the workbooks.
       </Project>
 
@@ -45,10 +44,10 @@ export function Featured() {
         drawing={<TimeforkDrawing />}
       >
         Coding agents sometimes delete or overwrite things git never tracked, like build output, node_modules or a local database.
-        timefork, an open-source tool I wrote in Rust, snapshots the whole project folder{" "}
-        <Claim k="before" ink="lemon">before each change an agent makes</Claim>,
-        using the file system’s <Claim k="cow" ink="rose">copy-on-write clones</Claim>, so you can go back to any point or branch from it.
-        On an 18 GB project a snapshot takes <Claim k="speed" ink="sky">0.9 seconds</Claim> and almost no extra disk space.
+        timefork, an open-source tool I wrote in Rust, snapshots the whole project folder
+        before each change an agent makes,
+        using the file system’s copy-on-write clones, so you can go back to any point or branch from it.
+        On an 18 GB project a snapshot takes 0.9 seconds and almost no extra disk space.
       </Project>
 
       <Project
@@ -61,10 +60,10 @@ export function Featured() {
         proof={<GalleristShot />}
         drawing={<GalleristDrawing />}
       >
-        Gallerist is a free tool for making Product Hunt gallery images in the browser. Instead of a blank canvas you start from{" "}
-        <Claim k="layouts" ink="lemon">seven slide layouts</Claim>, each built for one job, like the opening hook or a big number.{" "}
-        <Claim k="styles" ink="rose">Colours, paper finishes and type pairings</Claim> come with good defaults, and every slide{" "}
-        <Claim k="size" ink="mint">exports at Product Hunt’s exact size</Claim>. There’s no sign-up and no watermark.
+        Gallerist is a free tool for making Product Hunt gallery images in the browser. Instead of a blank canvas you start from
+        seven slide layouts, each built for one job, like the opening hook or a big number.
+        Colours, paper finishes and type pairings come with good defaults, and every slide
+        exports at Product Hunt’s exact size. There’s no sign-up and no watermark.
       </Project>
     </>
   );

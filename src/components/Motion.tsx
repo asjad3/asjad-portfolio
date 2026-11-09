@@ -8,7 +8,6 @@ import { useEffect } from "react";
  * - [data-reveal] blocks and the paragraphs of .prose that start below the fold are held back, then rise
  *   into place as they scroll in, staggered when several arrive together. Anything already on screen is left alone.
  * - [data-living] drawings play their clip, or get a pencil sweep, once they're well into view.
- *   Their highlighter marks ink after that.
  */
 export function Motion() {
   useEffect(() => {
