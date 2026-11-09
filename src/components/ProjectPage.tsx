@@ -2,7 +2,6 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
-import { Highlighter } from "./Highlighter";
 import { JsonLd } from "./JsonLd";
 import { Motion } from "./Motion";
 
@@ -34,11 +33,11 @@ export function ProjectPage({
         </nav>
         <article>
           <h1 data-enter="1">{name}</h1>
-          <p className="lede" data-highlightable="" data-enter="2">
+          <p className="lede" data-enter="2">
             {lede}
           </p>
           <div className="page-grid" data-enter="3">
-            <div className="prose" data-highlightable="">
+            <div className="prose">
               {children}
             </div>
             <dl className="facts">
@@ -53,7 +52,6 @@ export function ProjectPage({
         </article>
       </main>
       <Footer />
-      <Highlighter />
       <Motion />
       <JsonLd data={data} />
     </>

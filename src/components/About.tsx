@@ -12,12 +12,12 @@ export function About() {
       </h2>
       <div className="about-grid">
         <div>
-          <p className="first" data-highlightable="" data-reveal="">I’ve been a product manager since April 2026, mostly on AI features, from the first spec through to launch.</p>
-          <p data-highlightable="" data-reveal="">
+          <p className="first" data-reveal="">I’ve been a product manager since April 2026, mostly on AI features, from the first spec through to launch.</p>
+          <p data-reveal="">
             Before that I worked on product engineering at LootMart, on caching, pagination and the admin dashboard, and built websites for
             clients at WeZero Studios.
           </p>
-          <p data-highlightable="" data-reveal="">
+          <p data-reveal="">
             I like projects where I can write the spec and then help build it. Most of what I make outside work is tooling for coding agents.
           </p>
         </div>

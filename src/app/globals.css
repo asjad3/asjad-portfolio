@@ -56,7 +56,7 @@ img { display: block; max-width: 100%; height: auto; }
 [data-ink="mint"] { --c: var(--mint); }
 [data-ink="sky"] { --c: var(--sky); }
 
-mark.claim, mark.ink, mark.visitor {
+mark.claim, mark.ink {
   color: inherit;
   background-color: transparent;
   background-image: linear-gradient(100deg, transparent 0.5%, var(--c) 2%, color-mix(in oklab, var(--c) 80%, transparent) 48%, var(--c) 96%, transparent 99%);
@@ -195,39 +195,6 @@ pre.code .ln[data-ink] { background: color-mix(in oklab, var(--c) 72%, transpare
 .facts dt { font-size: 15px; color: var(--pencil); }
 .facts dd { font-weight: 600; }
 
-/* ───────── visitor highlights ───────── */
-.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
-.trap { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
-.hl-trigger { position: absolute; z-index: 40; transform: translateX(-50%); display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border: 0; border-radius: 999px; background: var(--graphite); color: var(--paper); font: 600 15px var(--sans); box-shadow: 0 10px 28px -12px rgba(0, 0, 0, 0.45); cursor: pointer; }
-.hl-trigger i { width: 16px; height: 10px; border-radius: 3px; background: var(--lemon); }
-.hl-pop { position: absolute; z-index: 41; width: 360px; max-width: calc(100vw - 24px); background: #fff; border: 1px solid var(--rule); border-radius: 14px; padding: 16px; box-shadow: 0 22px 60px -24px rgba(0, 0, 0, 0.4); }
-.hl-quote { font-weight: 700; line-height: 1.45; max-height: 7.5em; overflow: auto; }
-.hl-inks { display: flex; gap: 12px; margin: 14px 0 12px; border: 0; }
-.hl-inks input { position: absolute; opacity: 0; width: 1px; height: 1px; }
-.hl-inks label { display: block; width: 30px; height: 30px; border-radius: 50%; background: var(--c); box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08); cursor: pointer; }
-.hl-inks input:checked + label { outline: 2px solid var(--graphite); outline-offset: 2px; }
-.hl-inks input:focus-visible + label { outline: 2px solid var(--graphite); outline-offset: 4px; }
-.hl-pop input[type="text"] { width: 100%; font: 17px var(--sans); color: var(--graphite); padding: 10px 12px; border: 1px solid var(--rule); border-radius: 8px; background: var(--paper); }
-.hl-pop input[type="text"]:focus { outline: 2px solid var(--graphite); outline-offset: 1px; }
-.hl-row { display: flex; align-items: center; gap: 8px; margin-top: 12px; }
-.hl-row small { margin-right: auto; font-size: 14px; color: var(--pencil); }
-.hl-msg { margin-top: 10px; font-size: 15px; color: var(--lead); }
-.hl-msg.error { color: #a1271b; }
-.btn { font: 600 15px var(--sans); color: var(--graphite); padding: 8px 16px; border: 1px solid var(--rule); border-radius: 999px; background: none; cursor: pointer; }
-.btn.primary { background: var(--graphite); border-color: var(--graphite); color: var(--paper); }
-.btn:disabled { opacity: 0.6; cursor: default; }
-.vh-intro { color: var(--lead); max-width: 36em; margin: -16px 0 28px; }
-.vh-list { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 48px; border-top: 1px solid var(--rule); }
-.vh-list li { padding: 18px 0; border-bottom: 1px solid var(--rule); }
-.vh-list blockquote { font-size: 19px; font-weight: 700; line-height: 1.45; }
-.vh-note { margin-top: 6px; color: var(--lead); }
-.vh-meta { margin-top: 6px; font-size: 15px; color: var(--pencil); }
-.vh-empty { padding: 18px 0; border-top: 1px solid var(--rule); color: var(--pencil); }
-@media (pointer: coarse), (max-width: 560px) {
-  .hl-trigger { position: fixed; left: 50% !important; top: auto !important; bottom: calc(18px + env(safe-area-inset-bottom)); }
-  .hl-pop { position: fixed; left: 12px !important; right: 12px; top: auto !important; bottom: calc(12px + env(safe-area-inset-bottom)); width: auto; max-width: none; }
-}
-
 /* ───────── motion ─────────
    Only with the `motion` class: the boot script sets it unless the visitor prefers reduced motion or saves data. */
 @keyframes rise { from { opacity: 0; transform: translateY(18px); } }
@@ -273,7 +240,6 @@ pre.code .ln[data-ink] { background: color-mix(in oklab, var(--c) 72%, transpare
   .p-proof, .facts { position: static; }
   .list li { grid-template-columns: 1fr; gap: 4px; padding: 18px 0; }
   .list .go { justify-self: start; margin-top: 4px; }
-  .vh-list { grid-template-columns: 1fr; }
 }
 @media (max-width: 560px) {
   body { font-size: 17px; }

@@ -2,12 +2,10 @@ import { About } from "@/components/About";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { Highlighter } from "@/components/Highlighter";
 import { Interactions } from "@/components/Interactions";
 import { JsonLd } from "@/components/JsonLd";
 import { MoreProjects } from "@/components/MoreProjects";
 import { Motion } from "@/components/Motion";
-import { VisitorHighlights } from "@/components/VisitorHighlights";
 import { Featured } from "@/content/featured";
 import { personId, site, websiteId } from "@/lib/site";
 
@@ -77,17 +75,9 @@ export default function Home() {
         </section>
         <MoreProjects />
         <About />
-        <section className="wrap section" id="highlights" aria-labelledby="highlights-title">
-          <h2 id="highlights-title" data-reveal="">
-            Highlights from visitors
-          </h2>
-          <p className="vh-intro" data-reveal="">Select any line on this site to highlight it, and leave a note if you like. The latest ones show up here.</p>
-          <VisitorHighlights />
-        </section>
       </main>
       <Footer />
       <Interactions />
-      <Highlighter />
       <Motion />
       <JsonLd data={structuredData} />
     </>

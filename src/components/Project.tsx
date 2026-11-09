@@ -26,7 +26,7 @@ export function Project({
         <h3 id={id} data-reveal="">
           {name}
         </h3>
-        <p data-highlightable="" data-reveal="">
+        <p data-reveal="">
           {children}
         </p>
         <p className="actions" data-reveal="">

@@ -11,11 +11,11 @@ export function Hero() {
           <h1 id="name" data-enter="">
             {site.name}
           </h1>
-          <p className="line" data-highlightable="" data-enter="1">
+          <p className="line" data-enter="1">
             Product manager at ImagineArt. I <Claim k="spec" ink="lemon">write product specs</Claim>, and I{" "}
             <Claim k="code" ink="mint">still write code</Claim>.
           </p>
-          <p className="intro" data-highlightable="" data-enter="2">
+          <p className="intro" data-enter="2">
             Since April 2026 I’ve led AI Sheets from the first prototype to launch, owned the AI Trip Planner, and ran the launch of
             Campaign Director. Now I’m working on Imagine Echo. I live and work in Islamabad.
           </p>
